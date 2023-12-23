@@ -1,0 +1,222 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.2fr 0.5fr 0.5fr 0.1fr 0.3fr 0.1fr 0.2fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "picture picture picture"
+        "welcome welcome welcome"
+        "stats stats stats"
+        "portfolios portfolios portfolios"
+        "review review review"
+        "blog blog blog"
+        "team team team"
+        ". logos ."
+        "footer footer footer"
+        "info info info";
+}
+
+.picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header"
+        ". picture-text ."
+        ". . .";
+    grid-area: picture;
+    background-image: url(first-picture.webp);
+    height: 1000px;
+}
+
+.header {
+    grid-area: header;
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background: #FFFFFF;
+}
+
+.picture-text {
+    grid-area: picture-text;
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". welcome-title ."
+        "welcome-picture welcome-features ."
+        "welcome-picture welcome-features .";
+    grid-area: welcome;
+}
+
+.welcome-title {
+    grid-area: welcome-title;
+}
+
+.welcome-picture {
+    grid-area: welcome-picture;
+    place-self: center;
+}
+
+.welcome-features {
+    grid-area: welcome-features;
+    place-self: center;
+}
+
+.row-1 {
+    display: flex;
+}
+
+.row-2 {
+    display: flex;
+}
+
+.stats {
+    grid-area: stats;
+    display: flex;
+}
+
+.portfolios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". portfolios-title ."
+        ". portfolios-photos ."
+        ". portfolios-photos .";
+    grid-area: portfolios;
+    place-self: center;
+}
+
+.portfolios-title {
+    grid-area: portfolios-title;
+    place-self: center;
+}
+
+.portfolios-photos {
+    grid-area: portfolios-photos;
+}
+
+.review {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". review-text ."
+        ". . .";
+    grid-area: review;
+    height: 397px;
+}
+
+.review-text {
+    grid-area: review-text;
+}
+
+.blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". blog-title ."
+        ". blog-blog ."
+        ". . .";
+    grid-area: blog;
+    background: #666666;
+}
+
+.blog-title {
+    grid-area: blog-title;
+    place-self: center;
+}
+
+.blog-blog {
+    grid-area: blog-blog;
+    display: flex;
+}
+
+.blog-section {
+    width: 558px;
+    height: 385px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    border: 1px solid #666666;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". team-title ."
+        "team-photos team-photos team-photos"
+        ". . .";
+    grid-area: team;
+}
+
+.team-title {
+    grid-area: team-title;
+}
+
+.team-photos {
+    grid-area: team-photos;
+    display: flex;
+}
+
+.logos {
+    grid-area: logos;
+    display: flex;
+    justify-content: space-between;
+    place-self: center;
+}
+
+.footer {
+    grid-area: footer;
+    background: #222222;
+    display: flex;
+    place-content: space-around;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 261px;
+
+}
+
+.footer-section>h1 {
+    color: #FFFFFF
+}
+
+.footer-section>span {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.info {
+    grid-area: info;
+    background: #333333;
+}
